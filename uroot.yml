@@ -1,0 +1,10 @@
+nt: 6           # Number of time periods (T)
+ni: 800          # Number of individuals (N)
+rep: 50            # Number of simulation repetitions
+var_e: 0.5      # Variance of transitory component (e_it)
+var_u: 0.3      # Variance of permanent shock (u_it)
+var_p1: 1     # Variance of initial permanent component (p_i1)
+theta: 0.4     # Theta parameter
+rho: 1.0        # Persistence parameter (rho), usually 1.0 for unit root
+
+

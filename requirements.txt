@@ -8,6 +8,7 @@ scipy>=1.7.0
 statsmodels>=0.13.0
 pytest>=7.0.0
 scriptflow>=0.2.9
+pyyaml
 pydantic
 torch
 -e .

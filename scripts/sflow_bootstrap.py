@@ -26,16 +26,16 @@ def step2_combine_file():
         f.write("{}\n".format(a+b))
 
 # define a flow called sleepit
-async def flow_mc():
+async def flow_mcbs():
 
     # prefix = "conda run -n camp "  # if you want to use conda environment
     prefix = ""
 
     tasks = [
         sf.Task(
-            cmd    = [f"{prefix}python scripts/pt_uproot.py -o output/res_{i}.json -i {i} -c uroot.yml"],
+            cmd    = [f"{prefix}python scripts/bootstrap.py -o output/bootstrap/bs_{i}.json -i {i}"],
             shell = True,
-            outputs = f"output/res_{i}.json",
+            outputs = f"output/bootstrap/bs_{i}.json",
             name   = f"solve-{i}")
         for i in range(5)
     ]
@@ -49,5 +49,5 @@ async def flow_mc():
         with open(t.get_outputs()[0]) as f:
             combined.extend(json.load(f))
 
-    with open("output/res.json", "w") as f:
+    with open("output/bootstrap/bs.json", "w") as f:
         json.dump(combined, f, indent=2)

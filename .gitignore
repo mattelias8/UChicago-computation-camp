@@ -2,5 +2,7 @@
 src/camp.egg-info/
 __pycache__/
 .ipynb_checkpoints/
+data/
+output/
 .DS_Store
 res*.json
